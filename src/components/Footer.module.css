@@ -1,0 +1,223 @@
+.footer {
+    padding: 100px 24px 40px;
+    background-color: #FFFFFF;
+    color: #1a1a1a;
+    color: #1a1a1a;
+    /* Assume a top border separator */
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.topSection {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 3fr;
+    /* Logo | Col1 | Col2 | Col3 | Newsletter */
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-start;
+}
+
+.logoImage {
+    height: 40px;
+    /* Adjust based on actual logo ratio */
+    width: auto;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.columnHeader {
+    font-family: 'Geist Mono', monospace;
+    font-size: 10px;
+    color: #999999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+}
+
+.linkList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link {
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.link:hover {
+    opacity: 0.7;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletterTitle {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.newsletterText {
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    color: #999999;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    max-width: 300px;
+}
+
+.form {
+    display: flex;
+    gap: 12px;
+}
+
+.input {
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 8px;
+    padding: 0 16px;
+    /* Remove vertical padding, use height for centering */
+    height: 35px;
+    /* Explicit height per request */
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    color: #1a1a1a;
+    flex-grow: 1;
+    transition: outline 0.1s;
+}
+
+.input:focus {
+    outline: 1.5px solid #000000;
+}
+
+.input::placeholder {
+    color: #999999;
+}
+
+.button {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 100px;
+    padding: 0 16px;
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    /* Ensure centering */
+    align-items: center;
+    /* Ensure centering */
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #333333;
+}
+
+.bottomSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid transparent;
+    /* Placeholder if needed */
+}
+
+.copyright,
+.policyLinks {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: #999999;
+    letter-spacing: 0.02em;
+}
+
+.policyLinks {
+    display: flex;
+    gap: 24px;
+}
+
+.policyLink {
+    text-decoration: none;
+    color: #999999;
+    transition: color 0.2s;
+}
+
+.policyLink:hover {
+    color: #1a1a1a;
+}
+
+@media (max-width: 1024px) {
+    .topSection {
+        grid-template-columns: 1fr 1fr 1fr;
+        /* Logo | Newsletter */
+        grid-template-areas:
+            "logo logo logo"
+            "col1 col2 col3"
+            "news news news";
+        gap: 60px 24px;
+    }
+
+    .logo {
+        grid-area: logo;
+    }
+
+    .column:nth-of-type(2) {
+        grid-area: col1;
+    }
+
+    .column:nth-of-type(3) {
+        grid-area: col2;
+    }
+
+    .column:nth-of-type(4) {
+        grid-area: col3;
+    }
+
+    .newsletter {
+        grid-area: news;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .topSection {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .bottomSection {
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+    }
+}

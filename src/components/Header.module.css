@@ -1,0 +1,135 @@
+.header {
+    width: 100%;
+    font-family: 'Geist', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Default center, overridden in nav */
+}
+
+.topBar {
+    background-color: #7A55FD;
+    /* Updated color */
+    color: white;
+    height: 42px;
+    /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+    padding: 0;
+}
+
+.topBar p {
+    display: inline-block;
+}
+
+.topBarLink {
+    color: white;
+    font-weight: 600;
+    margin-left: 8px;
+    text-decoration: none;
+}
+
+.topBarLink:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    background-color: white;
+    padding: 24px 0;
+    /* Removed border-bottom as requested */
+}
+
+.navbar .container {
+    justify-content: flex-start;
+    /* Changed to control strict spacing */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 48px;
+    /* Strict 48px distance to menu */
+}
+
+.logoImage {
+    height: 29.28px;
+    /* Precise height from Figma */
+    width: auto;
+}
+
+.navLinks {
+    display: flex;
+    gap: 18px;
+    /* Strict 18px spacing between items */
+    list-style: none;
+    align-items: center;
+    margin-right: auto;
+    /* Push actions to the right */
+}
+
+.navLinks a {
+    color: #666;
+    font-weight: 400;
+    /* Default to Regular */
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+/* Specific weights */
+.navLinks li:first-child a {
+    font-weight: 500;
+    /* Produtos - Medium */
+}
+
+/* Diferenciais and Planos will inherit 400 (Regular) */
+
+.navLinks a:hover {
+    color: #000;
+}
+
+.navActions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.salesLink {
+    color: #666;
+    font-size: 16px;
+    /* Updated to 16px */
+    font-weight: 400;
+    /* Regular */
+}
+
+.demoButton {
+    background-color: white;
+    color: #000;
+    border: 1px solid #e5e5e5;
+    padding: 11px 13px;
+    /* Reduced to 11px to compensate for 1px border (Total 35px) */
+    border-radius: 999px;
+    /* Pill shape */
+    font-weight: 500;
+    /* Medium */
+    font-size: 16px;
+    /* Updated to 16px */
+    line-height: 0.6875;
+    /* Explicit 35px target */
+    cursor: pointer;
+    transition: all 0.2s;
+    /* shadow removed */
+}
+
+.demoButton:hover {
+    background-color: #f9f9f9;
+    border-color: #d4d4d4;
+}

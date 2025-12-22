@@ -1,0 +1,159 @@
+.hero {
+    padding: 100px 20px 60px;
+    /* Top padding to account for header, bottom for spacing */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Stack container and dashboard vertically */
+    align-items: center;
+    /* Center items horizontally */
+    justify-content: flex-start;
+}
+
+.container {
+    max-width: 800px;
+    /* Constrained width for text readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Badge */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    /* From print (pink 10) */
+    padding: 8px 13px;
+    /* Horizontal 13px from print, Vertical 8px for 35px height */
+    border: 1px solid #E5E5E5;
+    border-radius: 999px;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    margin-bottom: 24px;
+    /* Updated to 24px */
+}
+
+.badgeIcon {
+    display: flex;
+    align-items: center;
+}
+
+.badgeLogo {
+    height: 17.04px;
+    /* Precise height from Figma */
+    width: auto;
+}
+
+
+
+.badgeGray {
+    color: #666;
+    font-size: 16px;
+    /* User requested 16px */
+    font-weight: 400;
+}
+
+.badgeBold {
+    font-family: 'GT Alpina', serif;
+    font-size: 17px;
+    /* User requested 17px */
+    font-weight: 400;
+    color: #000;
+}
+
+
+/* Typography */
+.headline {
+    font-family: 'GT Alpina', serif;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 24px;
+    max-width: 800px;
+    /* Increased to accommodate line breaks comfortably */
+}
+
+.subtext {
+    font-size: 16px;
+    /* User requested 16px */
+    line-height: 1.5;
+    font-weight: 400;
+    /* Regular */
+    color: #666;
+    margin-bottom: 32px;
+    /* Updated to 32px */
+    max-width: 600px;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.primaryButton {
+    background-color: #000;
+    color: #fff;
+    border: none;
+
+    /* Matching Header Button Specs */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 13px;
+    line-height: 0.6875;
+    /* Match global button fix */
+    font-size: 16px;
+    /* Requested 16px */
+
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.primaryButton:hover {
+    opacity: 0.9;
+}
+
+.secondaryButton {
+    background-color: #F5F5F5;
+    color: #000;
+    border: none;
+
+    /* Matching Header Button Specs */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 13px;
+    line-height: 0.6875;
+    /* Match global button fix */
+    font-size: 16px;
+    /* Requested 16px */
+
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.secondaryButton:hover {
+    background-color: #E5E5E5;
+}
+
+/* Dashboard Placeholder */
+.dashboardPlaceholder {
+    width: 100%;
+    max-width: 1180px;
+    /* Aligned to new grid */
+    height: 600px;
+    background-color: #000;
+    border-radius: 10px;
+    margin-top: 64px;
+}

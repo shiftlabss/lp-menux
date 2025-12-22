@@ -1,0 +1,92 @@
+.intelligence {
+    padding: 0 20px;
+    background-color: #fff;
+    /* Assumed white background */
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1180px;
+    /* Calculated from Grid: (12*80) + (11*20) */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 48px;
+    /* Updated to 48px from visual print */
+    max-width: 800px;
+}
+
+.headline {
+    font-family: 'GT Alpina', serif;
+    font-size: 36px;
+    /* User requested 36px */
+    font-weight: 400;
+    color: #000;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.subtext {
+    font-size: 16px;
+    /* User requested 16px */
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Grid */
+.grid {
+    display: flex;
+    gap: 20px;
+    /* Figma Gutter 20px */
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 380px;
+    /* Exact width: (4*80) + (3*20) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imageContainer {
+    width: 100%;
+    background-color: #F5F5F5;
+    /* Light gray bg for banner area if transparent */
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    /* Aspect ratio placeholder or reliant on image */
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cardTitle {
+    font-size: 16px;
+    /* User requested 16px */
+    font-weight: 500;
+    /* Medium */
+    color: #000;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.cardDescription {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
