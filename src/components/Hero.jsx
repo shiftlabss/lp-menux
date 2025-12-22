@@ -45,7 +45,9 @@ const Hero = () => {
             </div>
 
             {/* Dashboard Placeholder */}
-            <div className={styles.dashboardPlaceholder}></div>
+            <div className={styles.dashboardPlaceholder}>
+                <img src="/img-menux.png" alt="Menux Dashboard" className={styles.dashboardImage} />
+            </div>
         </section>
     );
 };

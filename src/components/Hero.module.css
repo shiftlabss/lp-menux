@@ -151,9 +151,16 @@
 .dashboardPlaceholder {
     width: 100%;
     max-width: 1180px;
-    /* Aligned to new grid */
-    height: 600px;
-    background-color: #000;
-    border-radius: 10px;
+    height: auto;
+    /* Allow height to adjust to content */
     margin-top: 64px;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboardImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
