@@ -108,4 +108,12 @@
     .questionText {
         font-size: 16px;
     }
+
+    .section {
+        padding-bottom: 60px;
+    }
+
+    .header {
+        margin-bottom: 48px;
+    }
 }
