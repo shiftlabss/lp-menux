@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Intelligence from './components/Intelligence';
 import DataIntelligence from './components/DataIntelligence';
 import Maestro from './components/Maestro';
+import Experience from './components/Experience';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
@@ -17,6 +18,7 @@ function App() {
         <Intelligence />
         <DataIntelligence />
         <Maestro />
+        <Experience />
         <Pricing />
         <FAQ />
         <Footer />

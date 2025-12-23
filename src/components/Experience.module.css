@@ -1,0 +1,218 @@
+.section {
+    padding: 100px 24px 0;
+    background-color: #FFFFFF;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 64px;
+}
+
+.sectionTitle {
+    font-family: 'GT Alpina', serif;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    color: #000000;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.mainCard {
+    /* Gradient logic based on "linear(0% #FFFFFF, 100% #F4F4F4)" assumption from print or similar subtle gradient */
+    background: linear-gradient(180deg, #FFFFFF 0%, #F4F4F4 100%);
+    border-radius: 10px;
+    /* Updated to 10px per request */
+    padding: 48px;
+    width: 100%;
+    position: relative;
+    border: none;
+    /* Removed border/stroke as requested */
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabsContainer {
+    display: inline-flex;
+    background-color: #F3F3F3;
+    border-radius: 100px;
+    padding: 4px;
+    margin-bottom: 48px;
+    align-self: flex-start;
+}
+
+.tabButton {
+    height: 35px;
+    padding: 0 13px;
+    border-radius: 100px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666666;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.activeTab {
+    background-color: #FFFFFF;
+    color: #000000;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.contentTitle {
+    font-family: 'GT Alpina', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 32px;
+    line-height: 1.2;
+}
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.checkItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.checkIcon {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    display: flex;
+    align-items: center;
+    /* Vertically center icon */
+    justify-content: center;
+}
+
+.checkText {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555555;
+    display: block;
+    /* Ensure text block behaves correctly */
+}
+
+.tagsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 48px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 13px;
+    border: 1px solid #E5E5E5;
+    border-radius: 999px;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    width: fit-content;
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.tagIcon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.ctaButton {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    height: 35px;
+    padding: 0 15px;
+    border-radius: 100px;
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+    line-height: 1;
+}
+
+.ctaButton:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 24px;
+    }
+
+    .sectionTitle {
+        font-size: 32px;
+    }
+
+    .contentTitle {
+        font-size: 28px;
+    }
+
+    .mainCard {
+        padding: 24px;
+    }
+
+    .tabsContainer {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-bottom: 32px;
+    }
+
+    .checkText {
+        font-size: 15px;
+    }
+}

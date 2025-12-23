@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Intelligence.module.css';
+import Reveal from './Reveal';
 
 const Intelligence = () => {
     const features = [
@@ -22,26 +23,28 @@ const Intelligence = () => {
             <div className={styles.container}>
 
                 {/* Header */}
-                <div className={styles.header}>
-                    <h2 className={styles.headline}>
-                        Menux Intelligence é a inteligência artificial especialista em restaurantes.
-                    </h2>
-                    <p className={styles.subtext}>
-                        A única inteligência que realmente entende o seu cardápio, sugere harmonizações e<br />
-                        aumenta o ticket médio sem substituir a hospitalidade.
-                    </p>
-                </div>
+                <Reveal>
+                    <div className={styles.header}>
+                        <h2 className={styles.headline}>
+                            Menux Intelligence é a inteligência artificial especialista em restaurantes.
+                        </h2>
+                        <p className={styles.subtext}>
+                            A única inteligência que realmente entende o seu cardápio, sugere harmonizações e<br />
+                            aumenta o ticket médio sem substituir a hospitalidade.
+                        </p>
+                    </div>
+                </Reveal>
 
                 {/* Grid */}
                 <div className={styles.grid}>
                     {features.map((feature, index) => (
-                        <div key={index} className={styles.card}>
+                        <Reveal key={index} delay={index * 0.15} className={styles.card}>
                             <div className={styles.imageContainer}>
                                 <img src="/banner-temp.svg" alt={`Feature ${index + 1}`} className={styles.banner} />
                             </div>
                             <h3 className={styles.cardTitle}>{feature.title}</h3>
                             <p className={styles.cardDescription}>{feature.description}</p>
-                        </div>
+                        </Reveal>
                     ))}
                 </div>
 

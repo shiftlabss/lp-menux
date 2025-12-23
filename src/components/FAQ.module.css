@@ -19,9 +19,9 @@
     margin-bottom: 80px;
 }
 
-.title {
+.sectionTitle {
     font-family: 'GT Alpina', serif;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 400;
     margin-bottom: 24px;
     color: #1a1a1a;
@@ -84,17 +84,6 @@
 
 .answerContainer {
     overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    max-height: 0;
-    opacity: 0;
-}
-
-.answerContainer.open {
-    max-height: 500px;
-    /* Arbitrary large value */
-    opacity: 1;
-    padding-bottom: 24px;
-    /* Only add padding when open */
 }
 
 .answerText {
@@ -112,7 +101,7 @@
 }
 
 @media (max-width: 768px) {
-    .title {
+    .sectionTitle {
         font-size: 36px;
     }
 

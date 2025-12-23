@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './DataIntelligence.module.css';
+import Reveal from './Reveal';
 
 const DataIntelligence = () => {
     return (
@@ -7,23 +8,25 @@ const DataIntelligence = () => {
             <div className={styles.container}>
 
                 {/* Header */}
-                <div className={styles.header}>
-                    <h2 className={styles.headline}>
-                        Inteligência de dados para você<br />
-                        decidir com segurança
-                    </h2>
-                    <p className={styles.subtext}>
-                        Com o Backoffice do Menux Intelligence, você deixa de “sentir” o cardápio e passa a enxergar o<br />
-                        que acontece de verdade. Você vê o que é muito visto e pouco pedido, o que tem alta aceitação<br />
-                        quando sugerido e onde existe oportunidade clara de ajuste, destaque ou remoção.
-                    </p>
-                </div>
+                <Reveal>
+                    <div className={styles.header}>
+                        <h2 className={styles.headline}>
+                            Inteligência de dados para você<br />
+                            decidir com segurança
+                        </h2>
+                        <p className={styles.subtext}>
+                            Com o Backoffice do Menux Intelligence, você deixa de “sentir” o cardápio e passa a enxergar o<br />
+                            que acontece de verdade. Você vê o que é muito visto e pouco pedido, o que tem alta aceitação<br />
+                            quando sugerido e onde existe oportunidade clara de ajuste, destaque ou remoção.
+                        </p>
+                    </div>
+                </Reveal>
 
                 {/* Grid */}
                 <div className={styles.grid}>
 
                     {/* Row 1 */}
-                    <div className={styles.cardLarge}>
+                    <Reveal delay={0.1} className={styles.cardLarge}>
                         <div className={styles.imageContainer}>
                             <img src="/bento-grid/1.svg" alt="Visão executiva" className={styles.image} />
                         </div>
@@ -34,8 +37,8 @@ const DataIntelligence = () => {
                                 leitura rápida para entender o turno.
                             </p>
                         </div>
-                    </div>
-                    <div className={styles.cardLarge}>
+                    </Reveal>
+                    <Reveal delay={0.2} className={styles.cardLarge}>
                         <div className={styles.imageContainer}>
                             <img src="/bento-grid/2.svg" alt="Engenharia de cardápio" className={styles.image} />
                         </div>
@@ -46,10 +49,10 @@ const DataIntelligence = () => {
                                 descrições e posicionamento dos itens.
                             </p>
                         </div>
-                    </div>
+                    </Reveal>
 
                     {/* Row 2 */}
-                    <div className={styles.cardSmall}>
+                    <Reveal delay={0.3} className={styles.cardSmall}>
                         <div className={styles.imageContainer}>
                             <img src="/bento-grid/3.svg" alt="Sugestões" className={styles.image} />
                         </div>
@@ -60,8 +63,8 @@ const DataIntelligence = () => {
                                 o impacto direto no ticket médio.
                             </p>
                         </div>
-                    </div>
-                    <div className={styles.cardSmall}>
+                    </Reveal>
+                    <Reveal delay={0.4} className={styles.cardSmall}>
                         <div className={styles.imageContainer}>
                             <img src="/bento-grid/4.svg" alt="Oportunidades" className={styles.image} />
                         </div>
@@ -72,8 +75,8 @@ const DataIntelligence = () => {
                                 foto e posição para vender mais.
                             </p>
                         </div>
-                    </div>
-                    <div className={styles.cardSmall}>
+                    </Reveal>
+                    <Reveal delay={0.5} className={styles.cardSmall}>
                         <div className={styles.imageContainer}>
                             <img src="/bento-grid/5.svg" alt="Operação" className={styles.image} />
                         </div>
@@ -84,7 +87,7 @@ const DataIntelligence = () => {
                                 com dados o que fica no cardápio.
                             </p>
                         </div>
-                    </div>
+                    </Reveal>
 
                 </div>
 

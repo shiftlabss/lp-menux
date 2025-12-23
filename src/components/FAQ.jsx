@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styles from './FAQ.module.css';
+import Reveal from './Reveal';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const ChevronIcon = ({ className }) => (
     <svg
@@ -31,11 +33,21 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
                 <span className={styles.questionText}>{question}</span>
                 <ChevronIcon className={`${styles.chevron} ${isOpen ? styles.open : ''}`} />
             </button>
-            <div className={`${styles.answerContainer} ${isOpen ? styles.open : ''}`}>
-                <div className={styles.answerText}>
-                    {answer}
-                </div>
-            </div>
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className={styles.answerContainer}
+                    >
+                        <div className={styles.answerText}>
+                            {answer}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 };
@@ -80,15 +92,17 @@ const FAQ = () => {
     return (
         <section className={styles.section}>
             <div className={styles.container}>
-                <header className={styles.header}>
-                    <h2 className={styles.title}>Pricing for every stage of growth</h2>
-                    <p className={styles.subtitle}>
-                        Menux makes it easy for finance leaders to forecast and manage costs,
-                        with straightforward SaaS pricing based on your business needs
-                    </p>
-                </header>
+                <Reveal>
+                    <header className={styles.header}>
+                        <h2 className={styles.sectionTitle}>Pricing for every stage of growth</h2>
+                        <p className={styles.subtitle}>
+                            Menux makes it easy for finance leaders to forecast and manage costs,
+                            with straightforward SaaS pricing based on your business needs
+                        </p>
+                    </header>
+                </Reveal>
 
-                <div className={styles.accordion}>
+                <Reveal delay={0.2} className={styles.accordion}>
                     {faqData.map((item, index) => (
                         <FAQItem
                             key={index}
@@ -98,7 +112,7 @@ const FAQ = () => {
                             onClick={() => handleToggle(index)}
                         />
                     ))}
-                </div>
+                </Reveal>
             </div>
         </section>
     );

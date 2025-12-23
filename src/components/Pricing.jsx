@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './Pricing.module.css';
+import Reveal from './Reveal';
+import { motion } from 'framer-motion';
 
 const CheckIcon = () => (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.checkIcon}>
@@ -41,17 +43,19 @@ const Pricing = () => {
     return (
         <section className={styles.section}>
             <div className={styles.container}>
-                <header className={styles.header}>
-                    <h2 className={styles.title}>Pricing for every stage of growth</h2>
-                    <p className={styles.subtitle}>
-                        O Menux facilita para os líderes financeiros a previsão e gerenciamento de custos,
-                        com preços SaaS diretos baseados nas necessidades do seu negócio.
-                    </p>
-                </header>
+                <Reveal>
+                    <header className={styles.header}>
+                        <h2 className={styles.sectionTitle}>Pricing for every stage of growth</h2>
+                        <p className={styles.subtitle}>
+                            O Menux facilita para os líderes financeiros a previsão e gerenciamento de custos,
+                            com preços SaaS diretos baseados nas necessidades do seu negócio.
+                        </p>
+                    </header>
+                </Reveal>
 
                 <div className={styles.grid}>
                     {plans.map((plan, index) => (
-                        <div key={index} className={styles.card}>
+                        <Reveal key={index} delay={index * 0.1} className={styles.card}>
                             <div className={styles.cardHeader}>
                                 <div className={styles.planTitleRow}>
                                     <span className={styles.planLabel}>PLANO</span>
@@ -91,15 +95,19 @@ const Pricing = () => {
                                     </li>
                                 </ul>
 
-                                <button className={styles.button}>
+                                <motion.button
+                                    className={styles.button}
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                >
                                     Assinar plano
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.33337 8H12.6667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                         <path d="M8 3.33331L12.6667 7.99998L8 12.6666" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
-                                </button>
+                                </motion.button>
                             </div>
-                        </div>
+                        </Reveal>
                     ))}
                 </div>
             </div>
