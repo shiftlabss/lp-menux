@@ -1,0 +1,353 @@
+.section {
+    padding: 100px 24px;
+    background-color: #FFFFFF;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.title {
+    font-family: 'GT Alpina', serif;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: stretch;
+}
+
+/* Calculator Card (Dark) */
+.calculatorCard {
+    background-color: #050505;
+    border-radius: 12px;
+    padding: 32px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    min-height: 420px;
+    height: auto;
+    width: 100%;
+    max-width: 580px;
+    box-sizing: border-box;
+    position: relative;
+    justify-content: flex-start;
+}
+
+.cardTitle {
+    font-family: 'GT Alpina', serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
+
+.cardDescription {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #999999;
+    margin-bottom: 40px;
+    max-width: 400px;
+}
+
+.inputsRow {
+    display: flex;
+    gap: 9px;
+    margin-bottom: 43px;
+    align-items: flex-end;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    color: #999999;
+    margin-left: 2px;
+}
+
+.inputContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    width: 166px;
+    height: 35px;
+    background-color: #1A1A1A;
+    border: none;
+    border-radius: 6px;
+    padding: 0 12px;
+    color: #FFFFFF;
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    box-shadow: none;
+}
+
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.resultsContainer {
+    display: flex;
+    gap: 9px;
+    margin-bottom: 16px;
+}
+
+.resultBoxMain {
+    background-color: #1A1A1A;
+    border-radius: 8px;
+    width: 341px;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.resultBoxPayback {
+    background-color: #1A1A1A;
+    border-radius: 8px;
+    width: 166px;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.resultLabel {
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+.resultValue {
+    font-family: 'Geist', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 1;
+}
+
+.disclaimer {
+    font-family: 'Geist', sans-serif;
+    font-size: 11px;
+    color: #444444;
+    text-align: left;
+    width: 100%;
+    padding-left: 4px;
+}
+
+
+/* Plan Card (Light) */
+.planCard {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F4F4F4 100%);
+    border-radius: 12px;
+    padding: 32px;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 420px;
+    height: auto;
+    width: 100%;
+    max-width: 580px;
+    box-sizing: border-box;
+}
+
+.planMeta {
+    font-family: 'Geist Mono', monospace;
+    font-size: 16px;
+    /* Updated to 16px */
+    color: #999999;
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.planNameColumn {
+    margin-bottom: 16px;
+}
+
+/* New class for the specific label "Plano" in the Plan Card */
+.planSectionLabel {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    /* Updated to 16px */
+    color: #666666;
+    margin-bottom: 4px;
+    /* from inline style */
+}
+
+.planName {
+    font-family: 'GT Alpina', serif;
+    font-size: 40px;
+    /* Kept at 40px (Blue underline) */
+    font-weight: 400;
+    line-height: 1;
+}
+
+.planDescription {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    /* Kept at 16px */
+    line-height: 1.5;
+    color: #666666;
+    margin-bottom: auto;
+    max-width: 380px;
+    padding-bottom: 32px;
+}
+
+.planPriceContainer {
+    margin-bottom: 32px;
+}
+
+.planPriceLabel {
+    font-size: 16px;
+    /* Updated to 16px */
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+.planPriceValue {
+    font-family: 'Geist', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+}
+
+.planPricePeriod {
+    font-size: 18px;
+    /* Was 18px, keeping larger than 16px seems correct or should I downgrade? User underlines "Preço" not value. */
+    color: #999999;
+    font-weight: 400;
+}
+
+.planNote {
+    font-size: 16px;
+    /* Updated to 16px */
+    color: #999999;
+    margin-top: 12px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    /* Reduced gap to fit side-by-side */
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
+    align-self: flex-start;
+    width: 100%;
+}
+
+.button {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 100px;
+    padding: 0 13px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.2s;
+    line-height: 1;
+}
+
+.button:hover {
+    background-color: #333333;
+}
+
+.salesLink {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    /* Updated to 16px */
+    color: #999999;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.salesLink:hover {
+    color: #1a1a1a;
+}
+
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+
+    .calculatorCard,
+    .planCard {
+        min-height: 420px;
+    }
+}
+
+@media (max-width: 640px) {
+    .inputsRow {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input {
+        width: 100% !important;
+    }
+
+    .resultsContainer {
+        flex-direction: column;
+    }
+
+    .resultBoxMain,
+    .resultBoxPayback {
+        width: 100%;
+    }
+}
