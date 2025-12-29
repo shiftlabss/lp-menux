@@ -5,6 +5,7 @@ import Intelligence from './components/Intelligence';
 import DataIntelligence from './components/DataIntelligence';
 import HowItWorks from './components/HowItWorks';
 import Maestro from './components/Maestro';
+import ContextProblem from './components/ContextProblem';
 import Experience from './components/Experience';
 import RoiCalculator from './components/RoiCalculator';
 import Pricing from './components/Pricing';
@@ -21,6 +22,7 @@ function App() {
         <DataIntelligence />
         <HowItWorks />
         <Maestro />
+        <ContextProblem />
         <Experience />
         <RoiCalculator />
         <Pricing />

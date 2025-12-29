@@ -1,0 +1,302 @@
+.section {
+    padding: 120px 20px;
+    background-color: #000000;
+    /* Pure black as per screenshot */
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-family: 'GT Alpina', serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 64px;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+    max-width: 800px;
+}
+
+.descriptionGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.descriptionItem {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #888888;
+    display: flex;
+    gap: 12px;
+}
+
+.bullet {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Timeline / Sequence */
+.problemSequence {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-bottom: 160px;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    padding-left: 20px;
+}
+
+/* Vertical Line */
+.timelineLine {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    /* Start inside the first circle roughly */
+    bottom: 20px;
+    width: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
+    z-index: 0;
+}
+
+.problemItem {
+    display: flex;
+    gap: 48px;
+    position: relative;
+    z-index: 1;
+}
+
+.timelineMarker {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+}
+
+.numberCircle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000000;
+    border: 1px solid #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Geist Mono', monospace;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.contentBox {
+    padding-top: 8px;
+}
+
+.iconWrapper {
+    margin-bottom: 16px;
+    color: #FFFFFF;
+    width: 24px;
+    height: 24px;
+}
+
+.itemTitle {
+    font-family: 'GT Alpina', serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: #FFFFFF;
+}
+
+.itemText {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666666;
+}
+
+/* Comparison Section */
+.comparisonContainer {
+    width: 100%;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* Space between headers and pills */
+}
+
+.comparisonMeta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    /* Reduced gap between columns to bring pills closer if needed, 40-60 is good */
+    width: 100%;
+}
+
+.comparisonColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.columnHeader {
+    font-family: 'Geist', sans-serif;
+    font-size: 18px;
+    /* Slightly larger header */
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.pill {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    /* Larger padding for pill shape */
+    border-radius: 100px;
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    max-width: 420px;
+    /* Consistent width */
+    transition: transform 0.2s;
+    line-height: 1.4;
+}
+
+/* Before Pills */
+.pill.before {
+    background-color: rgba(255, 255, 255, 0.08);
+    /* Dark gray glass */
+    color: #999999;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.iconBefore {
+    color: #666666;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+/* After Pills */
+.pill.after {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-weight: 500;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow contrast */
+}
+
+.iconAfter {
+    color: #00C896;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+/* CTA */
+.ctaWrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    height: 52px;
+    padding: 0 32px;
+    border-radius: 100px;
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s;
+    margin-bottom: 16px;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.microcopy {
+    display: block;
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    color: #555555;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .section {
+        padding: 80px 20px;
+    }
+
+    .title {
+        font-size: 40px;
+        text-align: left;
+    }
+
+    .descriptionGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .timelineLine {
+        left: 20px;
+    }
+
+    .timelineMarker {
+        width: 40px;
+        align-items: flex-start;
+        padding-left: 0;
+    }
+
+    .problemItem {
+        gap: 24px;
+        padding-left: 0;
+    }
+
+    .comparisonMeta {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .pill {
+        width: 100%;
+        max-width: none;
+        justify-content: flex-start;
+    }
+}
