@@ -1,22 +1,45 @@
+/* Hero Layout - Diagram-Based Correction */
 .hero {
-    padding: 72px 20px 60px;
-    /* Top padding to account for header, bottom for spacing */
+    padding: 60px 20px 0;
+    /* Roxo termina rente aos mockups */
+    margin-bottom: 0;
+    /* Adicionado margem para criar o respiro branco (Orange Item) */
     text-align: center;
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* Stack container and dashboard vertically */
     align-items: center;
-    /* Center items horizontally */
-    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    /* PROTEÇÃO DO HEADER: Garante que o fundo não suba além da seção */
+}
+
+/* Background Full-Screen (Expandido massivamente para evitar cortes) */
+.hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200vw;
+    /* Dobro da largura da tela para garantir sangria total */
+    height: 140%;
+    /* Altura suficiente para compor atrás do texto */
+    background: url('/bg-hero.svg') no-repeat center bottom;
+    background-size: 100% 100%;
+    /* Estica o degradê suavizando as bordas */
+    z-index: 0;
+    pointer-events: none;
 }
 
 .container {
-    max-width: 800px;
-    /* Constrained width for text readability */
+    max-width: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 48px;
 }
 
 /* Badge */
@@ -24,15 +47,12 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    /* From print (pink 10) */
     padding: 8px 13px;
-    /* Horizontal 13px from print, Vertical 8px for 35px height */
     border: 1px solid #E5E5E5;
     border-radius: 999px;
     background-color: white;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     margin-bottom: 24px;
-    /* Updated to 24px */
 }
 
 .badgeIcon {
@@ -42,27 +62,21 @@
 
 .badgeLogo {
     height: 17.04px;
-    /* Precise height from Figma */
     width: auto;
 }
-
-
 
 .badgeGray {
     color: #666;
     font-size: 16px;
-    /* User requested 16px */
     font-weight: 400;
 }
 
 .badgeBold {
     font-family: 'GT Alpina', serif;
     font-size: 17px;
-    /* User requested 17px */
     font-weight: 400;
     color: #000;
 }
-
 
 /* Typography */
 .headline {
@@ -73,51 +87,48 @@
     color: #000;
     margin-bottom: 24px;
     max-width: 800px;
-    /* Increased to accommodate line breaks comfortably */
 }
 
 .subtext {
     font-size: 16px;
-    /* User requested 16px */
     line-height: 1.5;
     font-weight: 400;
-    /* Regular */
     color: #666;
     margin-bottom: 32px;
-    /* Updated to 32px */
     max-width: 600px;
 }
 
 /* Actions */
+.actionsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
 .actions {
     display: flex;
-    gap: 16px;
+    gap: 12px;
     align-items: center;
     justify-content: center;
 }
 
-.secondaryAction {
-    display: flex;
-    gap: 8px;
-    align-items: center;
+.microcopy {
+    font-size: 14px;
+    color: #999;
 }
 
 .primaryButton {
     background-color: #000;
     color: #fff;
     border: none;
-
-    /* Matching Header Button Specs */
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     padding: 12px 13px;
     line-height: 0.6875;
-    /* Match global button fix */
     font-size: 16px;
-    /* Requested 16px */
-
     border-radius: 999px;
     cursor: pointer;
     font-weight: 500;
@@ -129,21 +140,16 @@
 }
 
 .secondaryButton {
-    background-color: #F5F5F5;
+    background-color: #FFFFFF;
     color: #000;
     border: none;
-
-    /* Matching Header Button Specs */
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     padding: 12px 13px;
     line-height: 0.6875;
-    /* Match global button fix */
     font-size: 16px;
-    /* Requested 16px */
-
     border-radius: 999px;
     cursor: pointer;
     font-weight: 500;
@@ -154,28 +160,72 @@
     background-color: #E5E5E5;
 }
 
-/* Dashboard Placeholder */
-.dashboardPlaceholder {
+/* Mockup Composition */
+.mockupWrapper {
     width: 100%;
-    max-width: 1180px;
-    height: auto;
-    /* Allow height to adjust to content */
-    margin-top: 64px;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    z-index: 5;
 }
 
-.dashboardImage {
+.mockupContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 32px;
     width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.webMock {
+    width: auto;
+    max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    display: block;
+    box-shadow: none;
+    filter: none;
+}
+
+.mobileMock {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    left: auto;
+    bottom: 0;
+    display: block;
+    box-shadow: none;
+    filter: none;
+}
+
+@media (max-width: 1100px) {
+    .mockupContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .webMock {
+        max-width: 95%;
+    }
+
+    .mobileMock {
+        max-width: 50%;
+    }
 }
 
 @media (max-width: 768px) {
     .headline {
         font-size: 32px;
-        /* Adjusted for mobile */
     }
 
     .subtext {
@@ -197,7 +247,7 @@
         width: 100%;
     }
 
-    .dashboardPlaceholder {
+    .mockupWrapper {
         margin-top: 40px;
     }
 }

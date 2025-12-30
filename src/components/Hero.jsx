@@ -15,8 +15,7 @@ const Hero = () => {
                             <img src="/icon-menux.svg" alt="menux" className={styles.badgeLogo} />
                         </span>
                         <span className={styles.badgeText}>
-                            <span className={styles.badgeGray}>Conheça o </span>
-                            <span className={styles.badgeBold}>menuxIA</span>
+                            <span className={styles.badgeBold}>Conheça o Menux</span>
                         </span>
                     </div>
                 </Reveal>
@@ -33,37 +32,43 @@ const Hero = () => {
                 {/* Subtext */}
                 <Reveal delay={0.2}>
                     <p className={styles.subtext}>
-                        Conheça o Menux IA, o assistente inteligente que explica pratos, tira dúvidas e recomenda itens, ajudando sua equipe a vender mais com menos esforço
+                        Menux é o cardápio por QR Code com o Maestro, um assistente que explica pratos, tira dúvidas e sugere combinações no momento certo, para você vender mais por mesa com menos esforço da equipe.
                     </p>
                 </Reveal>
 
                 {/* Actions */}
                 <Reveal delay={0.3}>
-                    <div className={styles.actions}>
-                        <div className={styles.secondaryAction}>
+                    <div className={styles.actionsContainer}>
+                        <div className={styles.actions}>
                             <motion.button
                                 className={styles.primaryButton}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Descobrir o Menux &rarr;
+                                Solicitar demonstração
                             </motion.button>
                             <motion.button
                                 className={styles.secondaryButton}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Solicitar demonstração
+                                Ver como funciona
                             </motion.button>
                         </div>
+                        <span className={styles.microcopy}>
+                            Demonstração rápida. Sem compromisso.
+                        </span>
                     </div>
                 </Reveal>
 
             </div>
 
-            {/* Dashboard Placeholder */}
-            <Reveal delay={0.4} className={styles.dashboardPlaceholder}>
-                <img src="/img-menux.png" alt="Menux Dashboard" className={styles.dashboardImage} />
+            {/* Dashboard Mockups */}
+            <Reveal delay={0.4} className={styles.mockupWrapper}>
+                <div className={styles.mockupContainer}>
+                    <img src="/web-mock.svg" alt="Menux Web Dashboard" className={styles.webMock} />
+                    <img src="/mobile-mock.svg" alt="Menux Mobile App" className={styles.mobileMock} />
+                </div>
             </Reveal>
         </section>
     );

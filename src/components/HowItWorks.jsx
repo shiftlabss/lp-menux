@@ -66,15 +66,15 @@ const HowItWorks = () => {
     const steps = [
         {
             title: "Cliente escaneia o QR Code",
-            description: "O cardápio abre com um assistente que explica pratos e entende dúvidas comuns, como porção, ingredientes e restrições."
+            description: "O cardápio abre com o Maestro, que explica pratos e responde dúvidas comuns como porção, ingredientes e restrições."
         },
         {
-            title: "Cliente escolhe com ajuda da nossa IA",
-            description: "O Menux orienta a decisão e recomenda entradas, bebidas e sobremesas no momento certo, com naturalidade e contexto."
+            title: "Cliente escolhe com ajuda do Maestro",
+            description: "Ele orienta a decisão e sugere entradas, bebidas e sobremesas no momento certo, com naturalidade e contexto."
         },
         {
-            title: "Garçom valida e segue o fluxo normal",
-            description: "O cliente chama o garçom para confirmar. O pedido fica mais claro, com menos correção e menos retrabalho."
+            title: "Garçom confirma e segue o fluxo normal",
+            description: "O cliente chama o garçom para validar. O pedido chega mais claro, com menos correção e menos retrabalho."
         }
     ];
 
@@ -109,7 +109,7 @@ const HowItWorks = () => {
                             restaurante em 3 passos
                         </h2>
                         <p className={styles.subtitle}>
-                            Você não precisa mudar sua operação para começar. O Menux funciona sobre o seu QR Code e se encaixa no fluxo do salão com leveza.
+                            Você não precisa mudar sua operação para começar. O Menux funciona no seu QR Code e se encaixa no fluxo do salão com leveza.
                         </p>
                     </Reveal>
 
@@ -134,6 +134,19 @@ const HowItWorks = () => {
                             );
                         })}
                     </div>
+
+                    {/* Actions */}
+                    <Reveal delay={0.6}>
+                        <div className={styles.ctaWrapper}>
+                            <div className={styles.actions}>
+                                <button className={styles.primaryButton}>Solicitar demonstração</button>
+                                <button className={styles.secondaryButton}>Ver exemplo no celular</button>
+                            </div>
+                            <span className={styles.microcopy}>
+                                Sem treinamento complexo. Começa com o seu cardápio atual.
+                            </span>
+                        </div>
+                    </Reveal>
                 </div>
 
                 {/* Right Column */}

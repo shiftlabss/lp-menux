@@ -173,7 +173,58 @@
     line-height: 1.6;
 }
 
-/* Right Column (Image/Placeholder) */
+/* Actions */
+.ctaWrapper {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+.primaryButton {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    height: 35px;
+    padding: 0 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.primaryButton:hover {
+    opacity: 0.9;
+}
+
+.secondaryButton {
+    background-color: #FFFFFF;
+    color: #000;
+    border: 1px solid #E5E5E5;
+    height: 35px;
+    padding: 0 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.secondaryButton:hover {
+    background-color: #F9F9F9;
+}
+
+.microcopy {
+    font-size: 14px;
+    color: #999;
+}
+
 .imageWrapper {
     width: 100%;
     height: 580px;
@@ -190,10 +241,19 @@
 
     .imageWrapper {
         display: none;
-        /* Hide on mobile or move to bottom if requested? Usually keeping text focused is better */
     }
 
     .title {
         font-size: 32px;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        width: 100%;
     }
 }

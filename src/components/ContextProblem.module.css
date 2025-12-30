@@ -51,6 +51,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .title {
@@ -58,34 +59,22 @@
     font-size: 56px;
     font-weight: 400;
     line-height: 1.1;
-    text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
     color: #FFFFFF;
     letter-spacing: -0.02em;
-    max-width: 800px;
+    max-width: 900px;
 }
 
-.descriptionGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    max-width: 900px;
+.subheadline {
+    max-width: 700px;
     width: 100%;
 }
 
-.descriptionItem {
+.subheadline p {
     font-family: 'Geist', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
     color: #888888;
-    display: flex;
-    gap: 12px;
-}
-
-.bullet {
-    color: #FFFFFF;
-    font-size: 16px;
-    line-height: 1.6;
 }
 
 /* Timeline / Sequence */
@@ -95,9 +84,8 @@
     gap: 60px;
     margin-bottom: 160px;
     position: relative;
-    max-width: 600px;
+    max-width: 700px;
     width: 100%;
-    padding-left: 20px;
 }
 
 /* Vertical Line */
@@ -105,7 +93,6 @@
     position: absolute;
     left: 40px;
     top: 20px;
-    /* Start inside the first circle roughly */
     bottom: 20px;
     width: 1px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
@@ -149,13 +136,6 @@
     padding-top: 8px;
 }
 
-.iconWrapper {
-    margin-bottom: 16px;
-    color: #FFFFFF;
-    width: 24px;
-    height: 24px;
-}
-
 .itemTitle {
     font-family: 'GT Alpina', serif;
     font-size: 32px;
@@ -178,14 +158,12 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    /* Space between headers and pills */
 }
 
 .comparisonMeta {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    /* Reduced gap between columns to bring pills closer if needed, 40-60 is good */
     width: 100%;
 }
 
@@ -195,14 +173,21 @@
     gap: 16px;
     align-items: center;
     position: relative;
-    /* Context for the glow */
 }
 
-/* Ensure content sits above the glow */
-.columnHeader,
-.pill {
+.columnHeader {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    color: #FFF;
+    margin-bottom: 16px;
     position: relative;
     z-index: 1;
+}
+
+/* Estilo destacado para "Com o Menux" */
+.menuxHeader {
+    font-family: 'GT Alpina', serif;
+    font-size: 17px;
 }
 
 .pill {
@@ -210,23 +195,22 @@
     align-items: center;
     gap: 8px;
     padding: 0 13px;
-    /* Larger padding for pill shape */
+    height: 35px;
     border-radius: 100px;
     font-family: 'Geist', sans-serif;
     font-size: 14px;
-    /* Slightly reduced layout font size to fit better in 35px if needed, but keeping 16px might be tight. Let's try to keep 16px first or follow "looks strange". 35px is quite small for 16px text + padding. I'll stick to 16px if possible, but padding must be 0 vertical. */
-    height: 35px;
     width: fit-content;
     max-width: 420px;
-    /* Consistent width */
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
     transition: transform 0.2s;
     line-height: 1;
 }
 
-/* Before Pills */
+/* Antes Pills */
 .pill.before {
     background-color: #3A3A3A;
-    /* Dark gray from screenshot */
     color: #FFFFFF;
     border: 1px solid #5C5C5C;
 }
@@ -236,22 +220,21 @@
     width: 14px;
     height: 14px;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
 }
 
-/* After Pills */
+/* Com o Menux Pills */
 .pill.after {
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #FFF;
+    color: #000;
     font-weight: 500;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    /* Subtle shadow contrast */
 }
 
 .iconAfter {
-    color: #00C896;
     width: 14px;
     height: 14px;
-    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -265,13 +248,17 @@
 
 /* CTA */
 .ctaWrapper {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
     margin-top: 40px;
+    text-align: center;
 }
 
 .button {
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #FFF;
+    color: #000;
     border: none;
     height: 35px;
     padding: 0 13px;
@@ -291,10 +278,10 @@
 }
 
 .microcopy {
-    display: block;
     font-family: 'Geist', sans-serif;
     font-size: 14px;
     color: #555555;
+    display: block;
 }
 
 /* Responsive */

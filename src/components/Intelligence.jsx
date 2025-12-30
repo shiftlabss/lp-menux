@@ -5,16 +5,16 @@ import Reveal from './Reveal';
 const Intelligence = () => {
     const features = [
         {
-            title: "Não inventa. Entende o cardápio.",
+            title: "1. Aprende o seu cardápio",
             description: "Responde às dúvidas do salão usando o seu cardápio, sem termos técnicos ou respostas genéricas."
         },
         {
-            title: "Recomenda com contexto",
-            description: "Sugere entradas, bebidas e sobremesas com lógica configurável, no momento certo da jornada."
+            title: "2. Recomenda com contexto",
+            description: "Sugere entradas, bebidas e sobremesas com regras configuráveis, no timing certo da jornada da mesa."
         },
         {
-            title: "Gera inteligência para decisão",
-            description: "Registra o comportamento de aceitação para mostrar o que funciona e onde ajustar a oferta."
+            title: "3. Gera inteligência para decisão",
+            description: "Registra o que a mesa aceita, ignora e pergunta, para você ajustar oferta e descrições com dados."
         }
     ];
 
@@ -26,11 +26,10 @@ const Intelligence = () => {
                 <Reveal>
                     <div className={styles.header}>
                         <h2 className={styles.headline}>
-                            Menux Intelligence é a inteligência artificial especialista em restaurantes.
+                            Menux Intelligence é a IA especialista em restaurantes
                         </h2>
                         <p className={styles.subtext}>
-                            A única inteligência que realmente entende o seu cardápio, sugere harmonizações e<br />
-                            aumenta o ticket médio sem substituir a hospitalidade.
+                            Ela entende o seu cardápio, responde dúvidas do salão e sugere combinações no momento certo, para você vender mais sem perder a hospitalidade.
                         </p>
                     </div>
                 </Reveal>
@@ -47,6 +46,16 @@ const Intelligence = () => {
                         </Reveal>
                     ))}
                 </div>
+
+                {/* CTA */}
+                <Reveal delay={0.4}>
+                    <div className={styles.ctaWrapper}>
+                        <button className={styles.button}> Ver o Maestro em ação </button>
+                        <span className={styles.microcopy}>
+                            Você vê em 2 minutos como fica no seu cardápio.
+                        </span>
+                    </div>
+                </Reveal>
 
             </div>
         </section>
